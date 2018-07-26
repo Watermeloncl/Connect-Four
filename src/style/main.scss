@@ -1,0 +1,245 @@
+$color-player-one: green;
+$color-player-two: red;
+$color-none: #8f8f8f;
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 150px 450px 30px;
+    background-color: white;
+    width: 50%;
+    height: 50%;
+}
+
+.top {
+    background-color: white;
+    text-align: center;
+    align-self: center;
+}
+
+.middle {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    background-color: blue;
+}
+
+.block {
+    width: 1/7fr;
+    height: 1/6fr;
+    border-radius: 50%;
+}
+
+.trig {
+    background-color: transparent;
+    text-align: center;
+    color: blue;
+}
+
+.bottom {
+    background-color: green;
+    z-index: 10;
+    width: 1/7fr;
+    height: 1fr;
+}
+
+button {
+    border: none;
+}
+
+.row__one {
+    grid-row: 1/2;
+}
+.row__two {
+    grid-row: 2/3;
+}
+.row__three {
+    grid-row: 3/4;
+}
+.row__four {
+    grid-row: 4/5;
+}
+.row__five {
+    grid-row: 5/6;
+}
+.row__six {
+    grid-row: 6/7;
+}
+.column__one {
+    grid-column: 1/2;
+}
+.column__two {
+    grid-column: 2/3;
+}
+.column__three {
+    grid-column: 3/4;
+}
+.column__four {
+    grid-column: 4/5;
+}
+.column__five {
+    grid-column: 5/6;
+}
+.column__six {
+    grid-column: 6/7;
+}
+.column__seven {
+    grid-column: 7/8;
+}
+.column__one__button {
+    grid-column: 1/2;
+    grid-row: 1/7;
+}
+.column__two__button {
+    grid-column: 2/3;
+    grid-row: 1/7;
+}
+.column__three__button {
+    grid-column: 3/4;
+    grid-row: 1/7;
+}
+.column__four__button {
+    grid-column: 4/5;
+    grid-row: 1/7;
+}
+.column__five__button {
+    grid-column: 5/6;
+    grid-row: 1/7;
+}
+.column__six__button {
+    grid-column: 6/7;
+    grid-row: 1/7;
+}
+.column__seven__button {
+    grid-column: 7/8;
+    grid-row: 1/7;
+}
+
+.row__one.column__one {
+    background-color: $color-none;
+}
+.row__two.column__one {
+    background-color: $color-none;
+}
+.row__three.column__one {
+    background-color: $color-none;
+}
+.row__four.column__one {
+    background-color: $color-none;
+}
+.row__five.column__one {
+    background-color: $color-none;
+}
+.row__six.column__one {
+    background-color: $color-none;
+}
+.row__one.column__two {
+    background-color: $color-none;
+}
+.row__two.column__two {
+    background-color: $color-none;
+}
+.row__three.column__two {
+    background-color: $color-none;
+}
+.row__four.column__two {
+    background-color: $color-none;
+}
+.row__five.column__two {
+    background-color: $color-none;
+}
+.row__six.column__two {
+    background-color: $color-none;
+}
+.row__one.column__three {
+    background-color: $color-none;
+}
+.row__two.column__three {
+    background-color: $color-none;
+}
+.row__three.column__three {
+    background-color: $color-none;
+}
+.row__four.column__three {
+    background-color: $color-none;
+}
+.row__five.column__three {
+    background-color: $color-none;
+}
+.row__six.column__three {
+    background-color: $color-none;
+}
+.row__one.column__four {
+    background-color: $color-none;
+}
+.row__two.column__four {
+    background-color: $color-none;
+}
+.row__three.column__four {
+    background-color: $color-none;
+}
+.row__four.column__four {
+    background-color: $color-none;
+}
+.row__five.column__four {
+    background-color: $color-none;
+}
+.row__six.column__four {
+    background-color: $color-none;
+}
+.row__one.column__five {
+    background-color: $color-none;
+}
+.row__two.column__five {
+    background-color: $color-none;
+}
+.row__three.column__five {
+    background-color: $color-none;
+}
+.row__four.column__five {
+    background-color: $color-none;
+}
+.row__five.column__five {
+    background-color: $color-none;
+}
+.row__six.column__five {
+    background-color: $color-none;
+}
+.row__one.column__six {
+    background-color: $color-none;
+}
+.row__two.column__six {
+    background-color: $color-none;
+}
+.row__three.column__six {
+    background-color: $color-none;
+}
+.row__four.column__six {
+    background-color: $color-none;
+}
+.row__five.column__six {
+    background-color: $color-none;
+}
+.row__six.column__six {
+    background-color: $color-none;
+}
+.row__one.column__seven {
+    background-color: $color-none;
+}
+.row__two.column__seven {
+    background-color: $color-none;
+}
+.row__three.column__seven {
+    background-color: $color-none;
+}
+.row__four.column__seven {
+    background-color: $color-none;
+}
+.row__five.column__seven {
+    background-color: $color-none;
+}
+.row__six.column__seven {
+    background-color: $color-none;
+}
