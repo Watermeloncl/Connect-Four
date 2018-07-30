@@ -1,10 +1,8 @@
-$color-player-one: green;
-$color-player-two: red;
 $color-none: #8f8f8f;
 
 .container {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 100%;
     grid-template-rows: 150px 450px 30px;
     background-color: white;
     width: 50%;
@@ -27,9 +25,9 @@ $color-none: #8f8f8f;
 }
 
 .block {
-    width: 1/7fr;
-    height: 1/6fr;
+    background-color: $color-none;
     border-radius: 50%;
+    margin: 3px 3px 3px 3px;
 }
 
 .trig {
@@ -115,131 +113,4 @@ button {
 .column__seven__button {
     grid-column: 7/8;
     grid-row: 1/7;
-}
-
-.row__one.column__one {
-    background-color: $color-none;
-}
-.row__two.column__one {
-    background-color: $color-none;
-}
-.row__three.column__one {
-    background-color: $color-none;
-}
-.row__four.column__one {
-    background-color: $color-none;
-}
-.row__five.column__one {
-    background-color: $color-none;
-}
-.row__six.column__one {
-    background-color: $color-none;
-}
-.row__one.column__two {
-    background-color: $color-none;
-}
-.row__two.column__two {
-    background-color: $color-none;
-}
-.row__three.column__two {
-    background-color: $color-none;
-}
-.row__four.column__two {
-    background-color: $color-none;
-}
-.row__five.column__two {
-    background-color: $color-none;
-}
-.row__six.column__two {
-    background-color: $color-none;
-}
-.row__one.column__three {
-    background-color: $color-none;
-}
-.row__two.column__three {
-    background-color: $color-none;
-}
-.row__three.column__three {
-    background-color: $color-none;
-}
-.row__four.column__three {
-    background-color: $color-none;
-}
-.row__five.column__three {
-    background-color: $color-none;
-}
-.row__six.column__three {
-    background-color: $color-none;
-}
-.row__one.column__four {
-    background-color: $color-none;
-}
-.row__two.column__four {
-    background-color: $color-none;
-}
-.row__three.column__four {
-    background-color: $color-none;
-}
-.row__four.column__four {
-    background-color: $color-none;
-}
-.row__five.column__four {
-    background-color: $color-none;
-}
-.row__six.column__four {
-    background-color: $color-none;
-}
-.row__one.column__five {
-    background-color: $color-none;
-}
-.row__two.column__five {
-    background-color: $color-none;
-}
-.row__three.column__five {
-    background-color: $color-none;
-}
-.row__four.column__five {
-    background-color: $color-none;
-}
-.row__five.column__five {
-    background-color: $color-none;
-}
-.row__six.column__five {
-    background-color: $color-none;
-}
-.row__one.column__six {
-    background-color: $color-none;
-}
-.row__two.column__six {
-    background-color: $color-none;
-}
-.row__three.column__six {
-    background-color: $color-none;
-}
-.row__four.column__six {
-    background-color: $color-none;
-}
-.row__five.column__six {
-    background-color: $color-none;
-}
-.row__six.column__six {
-    background-color: $color-none;
-}
-.row__one.column__seven {
-    background-color: $color-none;
-}
-.row__two.column__seven {
-    background-color: $color-none;
-}
-.row__three.column__seven {
-    background-color: $color-none;
-}
-.row__four.column__seven {
-    background-color: $color-none;
-}
-.row__five.column__seven {
-    background-color: $color-none;
-}
-.row__six.column__seven {
-    background-color: $color-none;
 }
