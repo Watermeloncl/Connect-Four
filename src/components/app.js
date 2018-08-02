@@ -141,7 +141,7 @@ export default class App extends Component {
 
       if (car.rThreecOne == 1 && car.rFourcTwo == 1 && car.rFivecThree == 1 && car.rSixcFour == 1) {winnersAre(1, "3", "10", "17", "24")}
       if (car.rThreecTwo == 1 && car.rFourcThree == 1 && car.rFivecFour == 1 && car.rSixcFive == 1) {winnersAre(1, "9", "16", "23", "30")}
-      if (car.rThreecThree == 1 && car.rFourcFour == 1 && car.rFivecFive == 1 && car.rSixcSix == 1) {winnersAre(1, "15", "22", "29", "34")}
+      if (car.rThreecThree == 1 && car.rFourcFour == 1 && car.rFivecFive == 1 && car.rSixcSix == 1) {winnersAre(1, "15", "22", "29", "36")}
       if (car.rThreecFour == 1 && car.rFourcFive == 1 && car.rFivecSix == 1 && car.rSixcSeven == 1) {winnersAre(1, "21", "28", "35", "42")}
 
 
@@ -158,7 +158,7 @@ export default class App extends Component {
       if (car.rThreecFour == 1 && car.rFourcThree == 1 && car.rFivecTwo == 1 && car.rSixcOne == 1) {winnersAre(1, "21", "16", "11", "6")}
       if (car.rThreecFive == 1 && car.rFourcFour == 1 && car.rFivecThree == 1 && car.rSixcTwo == 1) {winnersAre(1, "27", "22", "17", "12")}
       if (car.rThreecSix == 1 && car.rFourcFive == 1 && car.rFivecFour == 1 && car.rSixcThree == 1) {winnersAre(1, "33", "28", "23", "18")}
-      if (car.rThreecSeven == 1 && car.rFourcSix == 1 && car.rFivecFive == 1 && car.rSixcFour == 1) {winnersAre(1, "39", "24", "19", "14")}
+      if (car.rThreecSeven == 1 && car.rFourcSix == 1 && car.rFivecFive == 1 && car.rSixcFour == 1) {winnersAre(1, "39", "24", "29", "34")}
 
 
 
@@ -224,7 +224,7 @@ export default class App extends Component {
 
       if (car.rThreecOne == 2 && car.rFourcTwo == 2 && car.rFivecThree == 2 && car.rSixcFour == 2) {winnersAre(2, "3", "10", "17", "24")}
       if (car.rThreecTwo == 2 && car.rFourcThree == 2 && car.rFivecFour == 2 && car.rSixcFive == 2) {winnersAre(2, "9", "16", "23", "30")}
-      if (car.rThreecThree == 2 && car.rFourcFour == 2 && car.rFivecFive == 2 && car.rSixcSix == 2) {winnersAre(2, "15", "22", "29", "34")}
+      if (car.rThreecThree == 2 && car.rFourcFour == 2 && car.rFivecFive == 2 && car.rSixcSix == 2) {winnersAre(2, "15", "22", "29", "36")}
       if (car.rThreecFour == 2 && car.rFourcFive == 2 && car.rFivecSix == 2 && car.rSixcSeven == 2) {winnersAre(2, "21", "28", "35", "42")}
 
 
@@ -241,7 +241,7 @@ export default class App extends Component {
       if (car.rThreecFour == 2 && car.rFourcThree == 2 && car.rFivecTwo == 2 && car.rSixcOne == 2) {winnersAre(2, "21", "16", "11", "6")}
       if (car.rThreecFive == 2 && car.rFourcFour == 2 && car.rFivecThree == 2 && car.rSixcTwo == 2) {winnersAre(2, "27", "22", "17", "12")}
       if (car.rThreecSix == 2 && car.rFourcFive == 2 && car.rFivecFour == 2 && car.rSixcThree == 2) {winnersAre(2, "33", "28", "23", "18")}
-      if (car.rThreecSeven == 2 && car.rFourcSix == 2 && car.rFivecFive == 2 && car.rSixcFour == 2) {winnersAre(2, "39", "24", "19", "14")}
+      if (car.rThreecSeven == 2 && car.rFourcSix == 2 && car.rFivecFive == 2 && car.rSixcFour == 2) {winnersAre(2, "39", "24", "29", "34")}
     }
 
     function cOne() {
@@ -521,7 +521,7 @@ export default class App extends Component {
       } else if (car.rFourcSix == 0 && turn == 1) {
         document.getElementById("34").style.backgroundColor = colorOne;
         turn = 2;
-        car.rFourcSix = 2;
+        car.rFourcSix = 1;
       } else if (car.rThreecSix == 0 && turn == 1) {
         document.getElementById("33").style.backgroundColor = colorOne;
         turn = 2;
