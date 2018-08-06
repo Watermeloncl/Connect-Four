@@ -336,7 +336,7 @@ export default class App extends Component {
       //diagonal player 1
       if (car.rOnecOne == 1 && car.rTwocTwo == 1 && car.rThreecThree == 1 && car.rFourcFour == 1) {winnersAre(1, "1", "8", "15", "22")}
       if (car.rOnecTwo == 1 && car.rTwocThree == 1 && car.rThreecFour == 1 && car.rFourcFive == 1) {winnersAre(1, "7", "14", "21", "28")}
-      if (car.rOnecThree == 1 && car.rTwocFour == 1 && car.rThreecFive == 1 && car.rFourcSix == 1) {winnersAre(1, "13", "20", "27", "32")}
+      if (car.rOnecThree == 1 && car.rTwocFour == 1 && car.rThreecFive == 1 && car.rFourcSix == 1) {winnersAre(1, "13", "20", "27", "34")}
       if (car.rOnecFour == 1 && car.rTwocFive == 1 && car.rThreecSix == 1 && car.rFourcSeven == 1) {winnersAre(1, "19", "26", "33", "40")}
 
       if (car.rTwocOne == 1 && car.rThreecTwo == 1 && car.rFourcThree == 1 && car.rFivecFour == 1) {winnersAre(1, "2", "9", "16", "23")}
@@ -419,7 +419,7 @@ export default class App extends Component {
       //diagonal player 2
       if (car.rOnecOne == 2 && car.rTwocTwo == 2 && car.rThreecThree == 2 && car.rFourcFour == 2) {winnersAre(2, "1", "8", "15", "22")}
       if (car.rOnecTwo == 2 && car.rTwocThree == 2 && car.rThreecFour == 2 && car.rFourcFive == 2) {winnersAre(2, "7", "14", "21", "28")}
-      if (car.rOnecThree == 2 && car.rTwocFour == 2 && car.rThreecFive == 2 && car.rFourcSix == 2) {winnersAre(2, "13", "20", "27", "32")}
+      if (car.rOnecThree == 2 && car.rTwocFour == 2 && car.rThreecFive == 2 && car.rFourcSix == 2) {winnersAre(2, "13", "20", "27", "34")}
       if (car.rOnecFour == 2 && car.rTwocFive == 2 && car.rThreecSix == 2 && car.rFourcSeven == 2) {winnersAre(2, "19", "26", "33", "40")}
 
       if (car.rTwocOne == 2 && car.rThreecTwo == 2 && car.rFourcThree == 2 && car.rFivecFour == 2) {winnersAre(2, "2", "9", "16", "23")}
@@ -841,7 +841,6 @@ export default class App extends Component {
           <h3 id="43" >Player 1's Turn</h3>
         </div>
         <div className="middle">
-          <div id="0" className="background-behind"></div>
           <div id="1" className="block row__one column__one"></div>
           <div id="2" className="block row__two column__one"></div>
           <div id="3" className="block row__three column__one"></div>

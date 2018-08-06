@@ -51,13 +51,6 @@ $color-none: #8f8f8f;
     border-radius: 25%;
 }
 
-.background-behind {
-    background-color: #8f8f8f;
-    z-index: -1;
-    grid-row: 1/7;
-    grid-column: 1/8;
-}
-
 .row__one {
     grid-row: 1/2;
 }
