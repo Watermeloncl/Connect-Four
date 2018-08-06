@@ -77,6 +77,7 @@ export default class App extends Component {
       document.getElementById(idFour).style.backgroundColor = "Orange";
       turn = 0;
       document.getElementById("44").style.zIndex = "3";
+      document.getElementById("44.5").style.zIndex = "2";
     }
 
     function playGame() {
@@ -209,6 +210,7 @@ export default class App extends Component {
 
     function restartGame() {
       document.getElementById("44").style.zIndex = "-3";
+      document.getElementById("44.5").style.zIndex = "-2";
       document.getElementById("43").innerHTML = "Player 1's Turn";
       car.rOnecOne = 0;
       car.rTwocOne = 0;
@@ -447,6 +449,13 @@ export default class App extends Component {
       if (car.rThreecFive == 2 && car.rFourcFour == 2 && car.rFivecThree == 2 && car.rSixcTwo == 2) {winnersAre(2, "27", "22", "17", "12")}
       if (car.rThreecSix == 2 && car.rFourcFive == 2 && car.rFivecFour == 2 && car.rSixcThree == 2) {winnersAre(2, "33", "28", "23", "18")}
       if (car.rThreecSeven == 2 && car.rFourcSix == 2 && car.rFivecFive == 2 && car.rSixcFour == 2) {winnersAre(2, "39", "24", "29", "34")}
+
+      // if (car.rOnecOne != 0 && car.rOnecTwo != 0 && car.rOnecThree != 0 && car.rOnecFour != 0 && car.rOnecFive != 0 && car.rOnecSix != 0 && car.rOnecSeven != 0 && car.rTwocOne != 0 && car.rTwocTwo != 0 && car.rTwocThree != 0 && car.rTwocFour != 0 && car.rTwocFive != 0 && car.rTwocSix != 0 && car.rTwocSeven != 0 && car.rThreecOne != 0 && car.rThreecTwo != 0 && car.rThreecThree != 0 && car.rThreecFour != 0 && car.rThreecFive != 0 && car.rThreecSix != 0 && car.rThreecSeven != 0 && car.rFourcOne != 0 && car.rFourcTwo != 0 && car.rFourcThree != 0 && car.rFourcFour != 0 &&car.rFourcFive != 0 && car.rFourcSix != 0 && car.rFourcSeven != 0 && car.rFivecOne != 0 && car.rFivecTwo != 0 && car.rFivecThree != 0 && car.rFivecFour != 0 &&car.rFivecFive != 0 && car.rFivecSix != 0 && car.rFivecSeven != 0 && car.rSixcOne != 0 && car.rSixcTwo != 0 && car.rSixcThree != 0 && car.rSixcFour != 0 &&car.rSixcFive != 0 && car.rSixcSix != 0 && car.rSixcSeven != 0) {
+      //   document.getElementById("43").innerHTML = "Tie Game!";
+      //   turn = 0;
+      //   document.getElementById("44").style.zIndex = "3";
+      //   document.getElementById("44.5").style.zIndex = "-3";
+      // }
     }
 
     function cOne() {
@@ -896,7 +905,8 @@ export default class App extends Component {
           <div onClick={()=>pOneTeal()} id="55" className="chooseTealOne"></div>
           <div onClick={()=>pTwoTeal()} id="56" className="chooseTealTwo"></div>
           
-          <div onClick={() =>restartGame()} id="44" className="restart-button">Restart?</div>
+          <div onClick={() =>restartGame()} id="44" className="restartButton">Restart?</div>
+          <div onClick={() =>restartGame()} id="44.5" className="restartButtonBack"></div>
 
           <div onClick={() =>cOne()} className="trig column__one__button">
           </div>

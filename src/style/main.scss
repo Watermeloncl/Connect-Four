@@ -43,12 +43,23 @@ $color-none: #8f8f8f;
     height: 1fr;
 }
 
-.restart-button {
-    background-color: rgba(10,255,10,.5);
+.restartButton {
+    background-color: transparent;
     grid-row: 6/7;
     grid-column: 7/8;
     z-index: -3;
     border-radius: 25%;
+    text-align: center;
+    align-self: center;
+}
+
+.restartButtonBack {
+    background-color: rgba(10,255,10,.5);
+    grid-row: 6/7;
+    grid-column: 7/8;
+    z-index: -2;
+    border-radius: 25%;
+    text-align: center;
 }
 
 .row__one {
