@@ -841,6 +841,7 @@ export default class App extends Component {
           <h3 id="43" >Player 1's Turn</h3>
         </div>
         <div className="middle">
+          <div id="0" className="background-behind"></div>
           <div id="1" className="block row__one column__one"></div>
           <div id="2" className="block row__two column__one"></div>
           <div id="3" className="block row__three column__one"></div>
