@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 export default class App extends Component {
   render() {
 
-    var turn = 1;
+    var turn = 0;
     var colorOne = "Green"
     var colorTwo = "Red"
     var stringPartOne = "Player "
@@ -11,6 +11,8 @@ export default class App extends Component {
     var stringPartThree = "'s Turn"
     var stringPartFour = "Player One Wins!"
     var stringPartFive = "Player Two Wins!"
+    var playerOneChosen = false;
+    var playerTwoChosen = false;
 
     var car = {
       rOnecOne: 0,
@@ -77,9 +79,136 @@ export default class App extends Component {
       document.getElementById("44").style.zIndex = "3";
     }
 
+    function playGame() {
+      document.getElementById("49").style.zIndex = "-2"
+      document.getElementById("50").style.zIndex = "-2"
+      document.getElementById("51").style.zIndex = "-2"
+      document.getElementById("52").style.zIndex = "-2"
+      document.getElementById("53").style.zIndex = "-2"
+      document.getElementById("54").style.zIndex = "-2"
+      document.getElementById("55").style.zIndex = "-2"
+      document.getElementById("56").style.zIndex = "-2"
+      document.getElementById("45").style.zIndex = "-2"
+      document.getElementById("46").style.zIndex = "-2"
+      document.getElementById("47").style.zIndex = "-2"
+      document.getElementById("48").style.zIndex = "-2"
+      turn = 1;
+    }
+
+    function pOneGreen() {
+      if (playerOneChosen == false) {
+        document.getElementById("50").style.zIndex = "-2";
+        document.getElementById("51").style.zIndex = "-2";
+        document.getElementById("52").style.zIndex = "-2";
+        document.getElementById("55").style.zIndex = "-2";
+        playerOneChosen = true;
+        colorOne = "Green";
+      }
+      if (playerOneChosen == true && playerTwoChosen == true) {
+        playGame();
+      }
+    }
+
+    function pOneRed() {
+      if (playerOneChosen == false) {
+        document.getElementById("49").style.zIndex = "-2";
+        document.getElementById("51").style.zIndex = "-2";
+        document.getElementById("53").style.zIndex = "-2";
+        document.getElementById("55").style.zIndex = "-2";
+        playerOneChosen = true;
+        colorOne = "Red";
+      }
+      if (playerOneChosen == true && playerTwoChosen == true) {
+        playGame();
+      }
+    }
+
+    function pOneYellow() {
+      if (playerOneChosen == false) {
+        document.getElementById("49").style.zIndex = "-2";
+        document.getElementById("50").style.zIndex = "-2";
+        document.getElementById("54").style.zIndex = "-2";
+        document.getElementById("55").style.zIndex = "-2";
+        playerOneChosen = true;
+        colorOne = "Yellow";
+      }
+      if (playerOneChosen == true && playerTwoChosen == true) {
+        playGame();
+      }
+    }
+
+    function pTwoGreen() {
+      if (playerTwoChosen == false) {
+        document.getElementById("53").style.zIndex = "-2";
+        document.getElementById("54").style.zIndex = "-2";
+        document.getElementById("49").style.zIndex = "-2";
+        document.getElementById("56").style.zIndex = "-2";
+        playerTwoChosen = true;
+        colorTwo = "Green";
+      }
+      if (playerOneChosen == true && playerTwoChosen == true) {
+        playGame();
+      }
+    }
+
+    function pTwoRed() {
+      if (playerTwoChosen == false) {
+        document.getElementById("52").style.zIndex = "-2";
+        document.getElementById("54").style.zIndex = "-2";
+        document.getElementById("56").style.zIndex = "-2";
+        document.getElementById("50").style.zIndex = "-2";
+        playerTwoChosen = true;
+        colorTwo = "Red";
+      }
+      if (playerOneChosen == true && playerTwoChosen == true) {
+        playGame();
+      }
+    }
+
+    function pTwoYellow() {
+      if (playerTwoChosen == false) {
+        document.getElementById("52").style.zIndex = "-2";
+        document.getElementById("53").style.zIndex = "-2";
+        document.getElementById("56").style.zIndex = "-2";
+        document.getElementById("51").style.zIndex = "-2";
+        playerTwoChosen = true;
+        colorTwo = "Yellow";
+      }
+      if (playerOneChosen == true && playerTwoChosen == true) {
+        playGame();
+      }
+    }
+
+    function pOneTeal() {
+      if (playerOneChosen == false) {
+        document.getElementById("49").style.zIndex = "-2";
+        document.getElementById("50").style.zIndex = "-2";
+        document.getElementById("51").style.zIndex = "-2";
+        document.getElementById("56").style.zIndex = "-2";
+        playerOneChosen = true;
+        colorOne = "Teal";
+      }
+      if (playerOneChosen == true && playerTwoChosen == true) {
+        playGame();
+      }
+    }
+
+    function pTwoTeal() {
+      if (playerTwoChosen == false) {
+        document.getElementById("52").style.zIndex = "-2";
+        document.getElementById("53").style.zIndex = "-2";
+        document.getElementById("54").style.zIndex = "-2";
+        document.getElementById("55").style.zIndex = "-2";
+        playerTwoChosen = true;
+        colorTwo = "Teal";
+      }
+      if (playerOneChosen == true && playerTwoChosen == true) {
+        playGame();
+      }
+    }
+
     function restartGame() {
       document.getElementById("44").style.zIndex = "-3";
-      turn = 1;
       document.getElementById("43").innerHTML = "Player 1's Turn";
       car.rOnecOne = 0;
       car.rTwocOne = 0;
@@ -135,6 +264,21 @@ export default class App extends Component {
         i = i + 1
       }
       i = 0
+      playerOneChosen = false;
+      playerTwoChosen = false;
+      turn = 0;
+      document.getElementById("49").style.zIndex = "2";
+      document.getElementById("50").style.zIndex = "2";
+      document.getElementById("51").style.zIndex = "2";
+      document.getElementById("52").style.zIndex = "2";
+      document.getElementById("53").style.zIndex = "2";
+      document.getElementById("54").style.zIndex = "2";
+      document.getElementById("55").style.zIndex = "2";
+      document.getElementById("56").style.zIndex = "2";
+      document.getElementById("45").style.zIndex = "2";
+      document.getElementById("46").style.zIndex = "2";
+      document.getElementById("47").style.zIndex = "2";
+      document.getElementById("48").style.zIndex = "2";
     }
 
     function checkForFour() {
@@ -306,374 +450,388 @@ export default class App extends Component {
     }
 
     function cOne() {
-      if (car.rSixcOne == 0 && turn == 1) {
-        document.getElementById("6").style.backgroundColor = colorOne;
-        turn = 2;
-        car.rSixcOne = 1;
-      } else if (car.rFivecOne == 0 && turn == 1) {
-        document.getElementById("5").style.backgroundColor = colorOne;
-        turn = 2;
-        car.rFivecOne = 1;
-      } else if (car.rFourcOne == 0 && turn == 1) {
-        document.getElementById("4").style.backgroundColor = colorOne;
-        turn = 2;
-        car.rFourcOne = 1;
-      } else if (car.rThreecOne == 0 && turn == 1) {
-        document.getElementById("3").style.backgroundColor = colorOne;
-        turn = 2;
-        car.rThreecOne = 1;
-      } else if (car.rTwocOne == 0 && turn == 1) {
-        document.getElementById("2").style.backgroundColor = colorOne;
-        turn = 2;
-        car.rTwocOne = 1;
-      } else if (car.rOnecOne == 0 && turn == 1) {
-        document.getElementById("1").style.backgroundColor = colorOne;
-        turn = 2;
-        car.rOnecOne = 1;
-      } else if (car.rSixcOne == 0 && turn == 2) {
-        document.getElementById("6").style.backgroundColor = colorTwo;
-        turn = 1;
-        car.rSixcOne = 2;
-      } else if (car.rFivecOne == 0 && turn == 2) {
-        document.getElementById("5").style.backgroundColor = colorTwo;
-        turn = 1;
-        car.rFivecOne = 2;
-      } else if (car.rFourcOne == 0 && turn == 2) {
-        document.getElementById("4").style.backgroundColor = colorTwo;
-        turn = 1;
-        car.rFourcOne = 2;
-      } else if (car.rThreecOne == 0 && turn == 2) {
-        document.getElementById("3").style.backgroundColor = colorTwo;
-        turn = 1;
-        car.rThreecOne = 2;
-      } else if (car.rTwocOne == 0 && turn == 2) {
-        document.getElementById("2").style.backgroundColor = colorTwo;
-        turn = 1;
-        car.rTwocOne = 2;
-      } else if (car.rOnecOne == 0 && turn == 2) {
-        document.getElementById("1").style.backgroundColor = colorTwo;
-        turn = 1;
-        car.rOnecOne = 2;
+      if (turn != 0) {
+        if (car.rSixcOne == 0 && turn == 1) {
+          document.getElementById("6").style.backgroundColor = colorOne;
+          turn = 2;
+          car.rSixcOne = 1;
+        } else if (car.rFivecOne == 0 && turn == 1) {
+          document.getElementById("5").style.backgroundColor = colorOne;
+          turn = 2;
+          car.rFivecOne = 1;
+        } else if (car.rFourcOne == 0 && turn == 1) {
+          document.getElementById("4").style.backgroundColor = colorOne;
+          turn = 2;
+          car.rFourcOne = 1;
+        } else if (car.rThreecOne == 0 && turn == 1) {
+          document.getElementById("3").style.backgroundColor = colorOne;
+          turn = 2;
+          car.rThreecOne = 1;
+        } else if (car.rTwocOne == 0 && turn == 1) {
+          document.getElementById("2").style.backgroundColor = colorOne;
+          turn = 2;
+          car.rTwocOne = 1;
+        } else if (car.rOnecOne == 0 && turn == 1) {
+          document.getElementById("1").style.backgroundColor = colorOne;
+          turn = 2;
+          car.rOnecOne = 1;
+        } else if (car.rSixcOne == 0 && turn == 2) {
+          document.getElementById("6").style.backgroundColor = colorTwo;
+          turn = 1;
+          car.rSixcOne = 2;
+        } else if (car.rFivecOne == 0 && turn == 2) {
+          document.getElementById("5").style.backgroundColor = colorTwo;
+          turn = 1;
+          car.rFivecOne = 2;
+        } else if (car.rFourcOne == 0 && turn == 2) {
+          document.getElementById("4").style.backgroundColor = colorTwo;
+          turn = 1;
+          car.rFourcOne = 2;
+        } else if (car.rThreecOne == 0 && turn == 2) {
+          document.getElementById("3").style.backgroundColor = colorTwo;
+          turn = 1;
+          car.rThreecOne = 2;
+        } else if (car.rTwocOne == 0 && turn == 2) {
+          document.getElementById("2").style.backgroundColor = colorTwo;
+          turn = 1;
+          car.rTwocOne = 2;
+        } else if (car.rOnecOne == 0 && turn == 2) {
+          document.getElementById("1").style.backgroundColor = colorTwo;
+          turn = 1;
+          car.rOnecOne = 2;
+        }
+        checkForFour();
       }
-      checkForFour();
     }
 
     function cTwo() {
-      if (car.rSixcTwo == 0 && turn == 1) {
-        document.getElementById("12").style.backgroundColor = colorOne;
-        turn = 2;
-        car.rSixcTwo = 1;
-      } else if (car.rFivecTwo == 0 && turn == 1) {
-        document.getElementById("11").style.backgroundColor = colorOne;
-        turn = 2;
-        car.rFivecTwo = 1;
-      } else if (car.rFourcTwo == 0 && turn == 1) {
-        document.getElementById("10").style.backgroundColor = colorOne;
-        turn = 2;
-        car.rFourcTwo = 1;
-      } else if (car.rThreecTwo == 0 && turn == 1) {
-        document.getElementById("9").style.backgroundColor = colorOne;
-        turn = 2;
-        car.rThreecTwo = 1;
-      } else if (car.rTwocTwo == 0 && turn == 1) {
-        document.getElementById("8").style.backgroundColor = colorOne;
-        turn = 2;
-        car.rTwocTwo = 1;
-      } else if (car.rOnecTwo == 0 && turn == 1) {
-        document.getElementById("7").style.backgroundColor = colorOne;
-        turn = 2;
-        car.rOnecTwo = 1;
-      } else if (car.rSixcTwo == 0 && turn == 2) {
-        document.getElementById("12").style.backgroundColor = colorTwo;
-        turn = 1;
-        car.rSixcTwo = 2;
-      } else if (car.rFivecTwo == 0 && turn == 2) {
-        document.getElementById("11").style.backgroundColor = colorTwo;
-        turn = 1;
-        car.rFivecTwo = 2;
-      } else if (car.rFourcTwo == 0 && turn == 2) {
-        document.getElementById("10").style.backgroundColor = colorTwo;
-        turn = 1;
-        car.rFourcTwo = 2;
-      } else if (car.rThreecTwo == 0 && turn == 2) {
-        document.getElementById("9").style.backgroundColor = colorTwo;
-        turn = 1;
-        car.rThreecTwo = 2;
-      } else if (car.rTwocTwo == 0 && turn == 2) {
-        document.getElementById("8").style.backgroundColor = colorTwo;
-        turn = 1;
-        car.rTwocTwo = 2;
-      } else if (car.rOnecTwo == 0 && turn == 2) {
-        document.getElementById("7").style.backgroundColor = colorTwo;
-        turn = 1;
-        car.rOnecTwo = 2;
+      if (turn != 0) {
+        if (car.rSixcTwo == 0 && turn == 1) {
+          document.getElementById("12").style.backgroundColor = colorOne;
+          turn = 2;
+          car.rSixcTwo = 1;
+        } else if (car.rFivecTwo == 0 && turn == 1) {
+          document.getElementById("11").style.backgroundColor = colorOne;
+          turn = 2;
+          car.rFivecTwo = 1;
+        } else if (car.rFourcTwo == 0 && turn == 1) {
+          document.getElementById("10").style.backgroundColor = colorOne;
+          turn = 2;
+          car.rFourcTwo = 1;
+        } else if (car.rThreecTwo == 0 && turn == 1) {
+          document.getElementById("9").style.backgroundColor = colorOne;
+          turn = 2;
+          car.rThreecTwo = 1;
+        } else if (car.rTwocTwo == 0 && turn == 1) {
+          document.getElementById("8").style.backgroundColor = colorOne;
+          turn = 2;
+          car.rTwocTwo = 1;
+        } else if (car.rOnecTwo == 0 && turn == 1) {
+          document.getElementById("7").style.backgroundColor = colorOne;
+          turn = 2;
+          car.rOnecTwo = 1;
+        } else if (car.rSixcTwo == 0 && turn == 2) {
+          document.getElementById("12").style.backgroundColor = colorTwo;
+          turn = 1;
+          car.rSixcTwo = 2;
+        } else if (car.rFivecTwo == 0 && turn == 2) {
+          document.getElementById("11").style.backgroundColor = colorTwo;
+          turn = 1;
+          car.rFivecTwo = 2;
+        } else if (car.rFourcTwo == 0 && turn == 2) {
+          document.getElementById("10").style.backgroundColor = colorTwo;
+          turn = 1;
+          car.rFourcTwo = 2;
+        } else if (car.rThreecTwo == 0 && turn == 2) {
+          document.getElementById("9").style.backgroundColor = colorTwo;
+          turn = 1;
+          car.rThreecTwo = 2;
+        } else if (car.rTwocTwo == 0 && turn == 2) {
+          document.getElementById("8").style.backgroundColor = colorTwo;
+          turn = 1;
+          car.rTwocTwo = 2;
+        } else if (car.rOnecTwo == 0 && turn == 2) {
+          document.getElementById("7").style.backgroundColor = colorTwo;Green
+          turn = 1;
+          car.rOnecTwo = 2;
+        }
+        checkForFour();
       }
-      checkForFour();
     }
 
     function cThree() {
-      if (car.rSixcThree == 0 && turn == 1) {
-        document.getElementById("18").style.backgroundColor = colorOne;
-        turn = 2;
-        car.rSixcThree = 1;
-      } else if (car.rFivecThree == 0 && turn == 1) {
-        document.getElementById("17").style.backgroundColor = colorOne;
-        turn = 2;
-        car.rFivecThree = 1;
-      } else if (car.rFourcThree == 0 && turn == 1) {
-        document.getElementById("16").style.backgroundColor = colorOne;
-        turn = 2;
-        car.rFourcThree = 1;
-      } else if (car.rThreecThree == 0 && turn == 1) {
-        document.getElementById("15").style.backgroundColor = colorOne;
-        turn = 2;
-        car.rThreecThree = 1;
-      } else if (car.rTwocThree == 0 && turn == 1) {
-        document.getElementById("14").style.backgroundColor = colorOne;
-        turn = 2;
-        car.rTwocThree = 1;
-      } else if (car.rOnecThree == 0 && turn == 1) {
-        document.getElementById("13").style.backgroundColor = colorOne;
-        turn = 2;
-        car.rOnecThree = 1;
-      } else if (car.rSixcThree == 0 && turn == 2) {
-        document.getElementById("18").style.backgroundColor = colorTwo;
-        turn = 1;
-        car.rSixcThree = 2;
-      } else if (car.rFivecThree == 0 && turn == 2) {
-        document.getElementById("17").style.backgroundColor = colorTwo;
-        turn = 1;
-        car.rFivecThree = 2;
-      } else if (car.rFourcThree == 0 && turn == 2) {
-        document.getElementById("16").style.backgroundColor = colorTwo;
-        turn = 1;
-        car.rFourcThree = 2;
-      } else if (car.rThreecThree == 0 && turn == 2) {
-        document.getElementById("15").style.backgroundColor = colorTwo;
-        turn = 1;
-        car.rThreecThree = 2;
-      } else if (car.rTwocThree == 0 && turn == 2) {
-        document.getElementById("14").style.backgroundColor = colorTwo;
-        turn = 1;
-        car.rTwocThree = 2;
-      } else if (car.rOnecThree == 0 && turn == 2) {
-        document.getElementById("13").style.backgroundColor = colorTwo;
-        turn = 1;
-        car.rOnecThree = 2;
+      if (turn != 0) {
+        if (car.rSixcThree == 0 && turn == 1) {
+          document.getElementById("18").style.backgroundColor = colorOne;
+          turn = 2;
+          car.rSixcThree = 1;
+        } else if (car.rFivecThree == 0 && turn == 1) {
+          document.getElementById("17").style.backgroundColor = colorOne;
+          turn = 2;
+          car.rFivecThree = 1;
+        } else if (car.rFourcThree == 0 && turn == 1) {
+          document.getElementById("16").style.backgroundColor = colorOne;
+          turn = 2;
+          car.rFourcThree = 1;
+        } else if (car.rThreecThree == 0 && turn == 1) {
+          document.getElementById("15").style.backgroundColor = colorOne;
+          turn = 2;
+          car.rThreecThree = 1;
+        } else if (car.rTwocThree == 0 && turn == 1) {
+          document.getElementById("14").style.backgroundColor = colorOne;
+          turn = 2;
+          car.rTwocThree = 1;
+        } else if (car.rOnecThree == 0 && turn == 1) {
+          document.getElementById("13").style.backgroundColor = colorOne;
+          turn = 2;
+          car.rOnecThree = 1;
+        } else if (car.rSixcThree == 0 && turn == 2) {
+          document.getElementById("18").style.backgroundColor = colorTwo;
+          turn = 1;
+          car.rSixcThree = 2;
+        } else if (car.rFivecThree == 0 && turn == 2) {
+          document.getElementById("17").style.backgroundColor = colorTwo;
+          turn = 1;
+          car.rFivecThree = 2;
+        } else if (car.rFourcThree == 0 && turn == 2) {
+          document.getElementById("16").style.backgroundColor = colorTwo;
+          turn = 1;
+          car.rFourcThree = 2;
+        } else if (car.rThreecThree == 0 && turn == 2) {
+          document.getElementById("15").style.backgroundColor = colorTwo;
+          turn = 1;
+          car.rThreecThree = 2;
+        } else if (car.rTwocThree == 0 && turn == 2) {
+          document.getElementById("14").style.backgroundColor = colorTwo;
+          turn = 1;
+          car.rTwocThree = 2;
+        } else if (car.rOnecThree == 0 && turn == 2) {
+          document.getElementById("13").style.backgroundColor = colorTwo;
+          turn = 1;
+          car.rOnecThree = 2;
+        }
+        checkForFour();
       }
-      checkForFour();
     }
 
     function cFour() {
-      if (car.rSixcFour == 0 && turn == 1) {
-        document.getElementById("24").style.backgroundColor = colorOne;
-        turn = 2;
-        car.rSixcFour = 1;
-      } else if (car.rFivecFour == 0 && turn == 1) {
-        document.getElementById("23").style.backgroundColor = colorOne;
-        turn = 2;
-        car.rFivecFour = 1;
-      } else if (car.rFourcFour == 0 && turn == 1) {
-        document.getElementById("22").style.backgroundColor = colorOne;
-        turn = 2;
-        car.rFourcFour = 1;
-      } else if (car.rThreecFour == 0 && turn == 1) {
-        document.getElementById("21").style.backgroundColor = colorOne;
-        turn = 2;
-        car.rThreecFour = 1;
-      } else if (car.rTwocFour == 0 && turn == 1) {
-        document.getElementById("20").style.backgroundColor = colorOne;
-        turn = 2;
-        car.rTwocFour = 1;
-      } else if (car.rOnecFour == 0 && turn == 1) {
-        document.getElementById("19").style.backgroundColor = colorOne;
-        turn = 2;
-        car.rOnecFour = 1;
-      } else if (car.rSixcFour == 0 && turn == 2) {
-        document.getElementById("24").style.backgroundColor = colorTwo;
-        turn = 1;
-        car.rSixcFour = 2;
-      } else if (car.rFivecFour == 0 && turn == 2) {
-        document.getElementById("23").style.backgroundColor = colorTwo;
-        turn = 1;
-        car.rFivecFour = 2;
-      } else if (car.rFourcFour == 0 && turn == 2) {
-        document.getElementById("22").style.backgroundColor = colorTwo;
-        turn = 1;
-        car.rFourcFour = 2;
-      } else if (car.rThreecFour == 0 && turn == 2) {
-        document.getElementById("21").style.backgroundColor = colorTwo;
-        turn = 1;
-        car.rThreecFour = 2;
-      } else if (car.rTwocFour == 0 && turn == 2) {
-        document.getElementById("20").style.backgroundColor = colorTwo;
-        turn = 1;
-        car.rTwocFour = 2;
-      } else if (car.rOnecFour == 0 && turn == 2) {
-        document.getElementById("19").style.backgroundColor = colorTwo;
-        turn = 1;
-        car.rOnecFour = 2;
+      if (turn != 0) {
+        if (car.rSixcFour == 0 && turn == 1) {
+          document.getElementById("24").style.backgroundColor = colorOne;
+          turn = 2;
+          car.rSixcFour = 1;
+        } else if (car.rFivecFour == 0 && turn == 1) {
+          document.getElementById("23").style.backgroundColor = colorOne;
+          turn = 2;
+          car.rFivecFour = 1;
+        } else if (car.rFourcFour == 0 && turn == 1) {
+          document.getElementById("22").style.backgroundColor = colorOne;
+          turn = 2;
+          car.rFourcFour = 1;
+        } else if (car.rThreecFour == 0 && turn == 1) {
+          document.getElementById("21").style.backgroundColor = colorOne;
+          turn = 2;
+          car.rThreecFour = 1;
+        } else if (car.rTwocFour == 0 && turn == 1) {
+          document.getElementById("20").style.backgroundColor = colorOne;
+          turn = 2;
+          car.rTwocFour = 1;
+        } else if (car.rOnecFour == 0 && turn == 1) {
+          document.getElementById("19").style.backgroundColor = colorOne;
+          turn = 2;
+          car.rOnecFour = 1;
+        } else if (car.rSixcFour == 0 && turn == 2) {
+          document.getElementById("24").style.backgroundColor = colorTwo;
+          turn = 1;
+          car.rSixcFour = 2;
+        } else if (car.rFivecFour == 0 && turn == 2) {
+          document.getElementById("23").style.backgroundColor = colorTwo;
+          turn = 1;
+          car.rFivecFour = 2;
+        } else if (car.rFourcFour == 0 && turn == 2) {
+          document.getElementById("22").style.backgroundColor = colorTwo;
+          turn = 1;
+          car.rFourcFour = 2;
+        } else if (car.rThreecFour == 0 && turn == 2) {
+          document.getElementById("21").style.backgroundColor = colorTwo;
+          turn = 1;
+          car.rThreecFour = 2;
+        } else if (car.rTwocFour == 0 && turn == 2) {
+          document.getElementById("20").style.backgroundColor = colorTwo;
+          turn = 1;
+          car.rTwocFour = 2;
+        } else if (car.rOnecFour == 0 && turn == 2) {
+          document.getElementById("19").style.backgroundColor = colorTwo;
+          turn = 1;
+          car.rOnecFour = 2;
+        }
+        checkForFour();
       }
-      checkForFour();
     }
 
     function cFive() {
-      if (car.rSixcFive == 0 && turn == 1) {
-        document.getElementById("30").style.backgroundColor = colorOne;
-        turn = 2;
-        car.rSixcFive = 1;
-      } else if (car.rFivecFive == 0 && turn == 1) {
-        document.getElementById("29").style.backgroundColor = colorOne;
-        turn = 2;
-        car.rFivecFive = 1;
-      } else if (car.rFourcFive == 0 && turn == 1) {
-        document.getElementById("28").style.backgroundColor = colorOne;
-        turn = 2;
-        car.rFourcFive = 1;
-      } else if (car.rThreecFive == 0 && turn == 1) {
-        document.getElementById("27").style.backgroundColor = colorOne;
-        turn = 2;
-        car.rThreecFive = 1;
-      } else if (car.rTwocFive == 0 && turn == 1) {
-        document.getElementById("26").style.backgroundColor = colorOne;
-        turn = 2;
-        car.rTwocFive = 1;
-      } else if (car.rOnecFive == 0 && turn == 1) {
-        document.getElementById("25").style.backgroundColor = colorOne;
-        turn = 2;
-        car.rOnecFive = 1;
-      } else if (car.rSixcFive == 0 && turn == 2) {
-        document.getElementById("30").style.backgroundColor = colorTwo;
-        turn = 1;
-        car.rSixcFive = 2;
-      } else if (car.rFivecFive == 0 && turn == 2) {
-        document.getElementById("29").style.backgroundColor = colorTwo;
-        turn = 1;
-        car.rFivecFive = 2;
-      } else if (car.rFourcFive == 0 && turn == 2) {
-        document.getElementById("28").style.backgroundColor = colorTwo;
-        turn = 1;
-        car.rFourcFive = 2;
-      } else if (car.rThreecFive == 0 && turn == 2) {
-        document.getElementById("27").style.backgroundColor = colorTwo;
-        turn = 1;
-        car.rThreecFive = 2;
-      } else if (car.rTwocFive == 0 && turn == 2) {
-        document.getElementById("26").style.backgroundColor = colorTwo;
-        turn = 1;
-        car.rTwocFive = 2;
-      } else if (car.rOnecFive == 0 && turn == 2) {
-        document.getElementById("25").style.backgroundColor = colorTwo;
-        turn = 1;
-        car.rOnecFive = 2;
+      if (turn != 0) {
+        if (car.rSixcFive == 0 && turn == 1) {
+          document.getElementById("30").style.backgroundColor = colorOne;
+          turn = 2;
+          car.rSixcFive = 1;
+        } else if (car.rFivecFive == 0 && turn == 1) {
+          document.getElementById("29").style.backgroundColor = colorOne;
+          turn = 2;
+          car.rFivecFive = 1;
+        } else if (car.rFourcFive == 0 && turn == 1) {
+          document.getElementById("28").style.backgroundColor = colorOne;
+          turn = 2;
+          car.rFourcFive = 1;
+        } else if (car.rThreecFive == 0 && turn == 1) {
+          document.getElementById("27").style.backgroundColor = colorOne;
+          turn = 2;
+          car.rThreecFive = 1;
+        } else if (car.rTwocFive == 0 && turn == 1) {
+          document.getElementById("26").style.backgroundColor = colorOne;
+          turn = 2;
+          car.rTwocFive = 1;
+        } else if (car.rOnecFive == 0 && turn == 1) {
+          document.getElementById("25").style.backgroundColor = colorOne;
+          turn = 2;
+          car.rOnecFive = 1;
+        } else if (car.rSixcFive == 0 && turn == 2) {
+          document.getElementById("30").style.backgroundColor = colorTwo;
+          turn = 1;
+          car.rSixcFive = 2;
+        } else if (car.rFivecFive == 0 && turn == 2) {
+          document.getElementById("29").style.backgroundColor = colorTwo;
+          turn = 1;
+          car.rFivecFive = 2;
+        } else if (car.rFourcFive == 0 && turn == 2) {
+          document.getElementById("28").style.backgroundColor = colorTwo;
+          turn = 1;
+          car.rFourcFive = 2;
+        } else if (car.rThreecFive == 0 && turn == 2) {
+          document.getElementById("27").style.backgroundColor = colorTwo;
+          turn = 1;
+          car.rThreecFive = 2;
+        } else if (car.rTwocFive == 0 && turn == 2) {
+          document.getElementById("26").style.backgroundColor = colorTwo;
+          turn = 1;
+          car.rTwocFive = 2;
+        } else if (car.rOnecFive == 0 && turn == 2) {
+          document.getElementById("25").style.backgroundColor = colorTwo;
+          turn = 1;
+          car.rOnecFive = 2;
+        }
+        checkForFour();
       }
-      checkForFour();
     }
 
     function cSix() {
-      if (car.rSixcSix == 0 && turn == 1) {
-        document.getElementById("36").style.backgroundColor = colorOne;
-        turn = 2;
-        car.rSixcSix = 1;
-      } else if (car.rFivecSix == 0 && turn == 1) {
-        document.getElementById("35").style.backgroundColor = colorOne;
-        turn = 2;
-        car.rFivecSix = 1;
-      } else if (car.rFourcSix == 0 && turn == 1) {
-        document.getElementById("34").style.backgroundColor = colorOne;
-        turn = 2;
-        car.rFourcSix = 1;
-      } else if (car.rThreecSix == 0 && turn == 1) {
-        document.getElementById("33").style.backgroundColor = colorOne;
-        turn = 2;
-        car.rThreecSix = 1;
-      } else if (car.rTwocSix == 0 && turn == 1) {
-        document.getElementById("32").style.backgroundColor = colorOne;
-        turn = 2;
-        car.rTwocSix = 1;
-      } else if (car.rOnecSix == 0 && turn == 1) {
-        document.getElementById("31").style.backgroundColor = colorOne;
-        turn = 2;
-        car.rOnecSix = 1;
-      } else if (car.rSixcSix == 0 && turn == 2) {
-        document.getElementById("36").style.backgroundColor = colorTwo;
-        turn = 1;
-        car.rSixcSix = 2;
-      } else if (car.rFivecSix == 0 && turn == 2) {
-        document.getElementById("35").style.backgroundColor = colorTwo;
-        turn = 1;
-        car.rFivecSix = 2;
-      } else if (car.rFourcSix == 0 && turn == 2) {
-        document.getElementById("34").style.backgroundColor = colorTwo;
-        turn = 1;
-        car.rFourcSix = 2;
-      } else if (car.rThreecSix == 0 && turn == 2) {
-        document.getElementById("33").style.backgroundColor = colorTwo;
-        turn = 1;
-        car.rThreecSix = 2;
-      } else if (car.rTwocSix == 0 && turn == 2) {
-        document.getElementById("32").style.backgroundColor = colorTwo;
-        turn = 1;
-        car.rTwocSix = 2;
-      } else if (car.rOnecSix == 0 && turn == 2) {
-        document.getElementById("31").style.backgroundColor = colorTwo;
-        turn = 1;
-        car.rOnecSix = 2;
+      if (turn != 0) {
+        if (car.rSixcSix == 0 && turn == 1) {
+          document.getElementById("36").style.backgroundColor = colorOne;
+          turn = 2;
+          car.rSixcSix = 1;
+        } else if (car.rFivecSix == 0 && turn == 1) {
+          document.getElementById("35").style.backgroundColor = colorOne;
+          turn = 2;
+          car.rFivecSix = 1;
+        } else if (car.rFourcSix == 0 && turn == 1) {
+          document.getElementById("34").style.backgroundColor = colorOne;
+          turn = 2;
+          car.rFourcSix = 1;
+        } else if (car.rThreecSix == 0 && turn == 1) {
+          document.getElementById("33").style.backgroundColor = colorOne;
+          turn = 2;
+          car.rThreecSix = 1;
+        } else if (car.rTwocSix == 0 && turn == 1) {
+          document.getElementById("32").style.backgroundColor = colorOne;
+          turn = 2;
+          car.rTwocSix = 1;
+        } else if (car.rOnecSix == 0 && turn == 1) {
+          document.getElementById("31").style.backgroundColor = colorOne;
+          turn = 2;
+          car.rOnecSix = 1;
+        } else if (car.rSixcSix == 0 && turn == 2) {
+          document.getElementById("36").style.backgroundColor = colorTwo;
+          turn = 1;
+          car.rSixcSix = 2;
+        } else if (car.rFivecSix == 0 && turn == 2) {
+          document.getElementById("35").style.backgroundColor = colorTwo;
+          turn = 1;
+          car.rFivecSix = 2;
+        } else if (car.rFourcSix == 0 && turn == 2) {
+          document.getElementById("34").style.backgroundColor = colorTwo;
+          turn = 1;
+          car.rFourcSix = 2;
+        } else if (car.rThreecSix == 0 && turn == 2) {
+          document.getElementById("33").style.backgroundColor = colorTwo;
+          turn = 1;
+          car.rThreecSix = 2;
+        } else if (car.rTwocSix == 0 && turn == 2) {
+          document.getElementById("32").style.backgroundColor = colorTwo;
+          turn = 1;
+          car.rTwocSix = 2;
+        } else if (car.rOnecSix == 0 && turn == 2) {
+          document.getElementById("31").style.backgroundColor = colorTwo;
+          turn = 1;
+          car.rOnecSix = 2;
+        }
+        checkForFour();
       }
-      checkForFour();
     }
 
     function cSeven() {
-      if (car.rSixcSeven == 0 && turn == 1) {
-        document.getElementById("42").style.backgroundColor = colorOne;
-        turn = 2;
-        car.rSixcSeven = 1;
-      } else if (car.rFivecSeven == 0 && turn == 1) {
-        document.getElementById("41").style.backgroundColor = colorOne;
-        turn = 2;
-        car.rFivecSeven = 1;
-      } else if (car.rFourcSeven == 0 && turn == 1) {
-        document.getElementById("40").style.backgroundColor = colorOne;
-        turn = 2;
-        car.rFourcSeven = 1;
-      } else if (car.rThreecSeven == 0 && turn == 1) {
-        document.getElementById("39").style.backgroundColor = colorOne;
-        turn = 2;
-        car.rThreecSeven = 1;
-      } else if (car.rTwocSeven == 0 && turn == 1) {
-        document.getElementById("38").style.backgroundColor = colorOne;
-        turn = 2;
-        car.rTwocSeven = 1;
-      } else if (car.rOnecSeven == 0 && turn == 1) {
-        document.getElementById("37").style.backgroundColor = colorOne;
-        turn = 2;
-        car.rOnecSeven = 1;
-      } else if (car.rSixcSeven == 0 && turn == 2) {
-        document.getElementById("42").style.backgroundColor = colorTwo;
-        turn = 1;
-        car.rSixcSeven = 2;
-      } else if (car.rFivecSeven == 0 && turn == 2) {
-        document.getElementById("41").style.backgroundColor = colorTwo;
-        turn = 1;
-        car.rFivecSeven = 2;
-      } else if (car.rFourcSeven == 0 && turn == 2) {
-        document.getElementById("40").style.backgroundColor = colorTwo;
-        turn = 1;
-        car.rFourcSeven = 2;
-      } else if (car.rThreecSeven == 0 && turn == 2) {
-        document.getElementById("39").style.backgroundColor = colorTwo;
-        turn = 1;
-        car.rThreecSeven = 2;
-      } else if (car.rTwocSeven == 0 && turn == 2) {
-        document.getElementById("38").style.backgroundColor = colorTwo;
-        turn = 1;
-        car.rTwocSeven = 2;
-      } else if (car.rOnecSeven == 0 && turn == 2) {
-        document.getElementById("37").style.backgroundColor = colorTwo;
-        turn = 1;
-        car.rOnecSeven = 2;
+      if (turn != 0) {
+        if (car.rSixcSeven == 0 && turn == 1) {
+          document.getElementById("42").style.backgroundColor = colorOne;
+          turn = 2;
+          car.rSixcSeven = 1;
+        } else if (car.rFivecSeven == 0 && turn == 1) {
+          document.getElementById("41").style.backgroundColor = colorOne;
+          turn = 2;
+          car.rFivecSeven = 1;
+        } else if (car.rFourcSeven == 0 && turn == 1) {
+          document.getElementById("40").style.backgroundColor = colorOne;
+          turn = 2;
+          car.rFourcSeven = 1;
+        } else if (car.rThreecSeven == 0 && turn == 1) {
+          document.getElementById("39").style.backgroundColor = colorOne;
+          turn = 2;
+          car.rThreecSeven = 1;
+        } else if (car.rTwocSeven == 0 && turn == 1) {
+          document.getElementById("38").style.backgroundColor = colorOne;
+          turn = 2;
+          car.rTwocSeven = 1;
+        } else if (car.rOnecSeven == 0 && turn == 1) {
+          document.getElementById("37").style.backgroundColor = colorOne;
+          turn = 2;
+          car.rOnecSeven = 1;
+        } else if (car.rSixcSeven == 0 && turn == 2) {
+          document.getElementById("42").style.backgroundColor = colorTwo;
+          turn = 1;
+          car.rSixcSeven = 2;
+        } else if (car.rFivecSeven == 0 && turn == 2) {
+          document.getElementById("41").style.backgroundColor = colorTwo;
+          turn = 1;
+          car.rFivecSeven = 2;
+        } else if (car.rFourcSeven == 0 && turn == 2) {
+          document.getElementById("40").style.backgroundColor = colorTwo;
+          turn = 1;
+          car.rFourcSeven = 2;
+        } else if (car.rThreecSeven == 0 && turn == 2) {
+          document.getElementById("39").style.backgroundColor = colorTwo;
+          turn = 1;
+          car.rThreecSeven = 2;
+        } else if (car.rTwocSeven == 0 && turn == 2) {
+          document.getElementById("38").style.backgroundColor = colorTwo;
+          turn = 1;
+          car.rTwocSeven = 2;
+        } else if (car.rOnecSeven == 0 && turn == 2) {
+          document.getElementById("37").style.backgroundColor = colorTwo;
+          turn = 1;
+          car.rOnecSeven = 2;
+        }
+        checkForFour();
       }
-      checkForFour();
     }
 
     return (
@@ -725,22 +883,35 @@ export default class App extends Component {
           <div id="40" className="block row__four column__seven"></div>
           <div id="41" className="block row__five column__seven"></div>
           <div id="42" className="block row__six column__seven"></div>
-          <button onClick={() =>restartGame()} id="44" className="restart-button">Restart?</button>
+          <div id="45" className="playerOne">Player One</div>
+          <div id="46" className="playerTwo">Player Two</div>
+          <div id="47" className="chooseColorText"></div>
+          <div id="48" className="newBackground"></div>
+          <div onClick={()=>pOneGreen()} id="49" className="chooseGreenOne"></div>
+          <div onClick={()=>pOneRed()} id="50" className="chooseRedOne"></div>
+          <div onClick={()=>pOneYellow()} id="51" className="chooseYellowOne"></div>
+          <div onClick={()=>pTwoGreen()} id="52" className="chooseGreenTwo"></div>
+          <div onClick={()=>pTwoRed()} id="53" className="chooseRedTwo"></div>
+          <div onClick={()=>pTwoYellow()} id="54" className="chooseYellowTwo"></div>
+          <div onClick={()=>pOneTeal()} id="55" className="chooseTealOne"></div>
+          <div onClick={()=>pTwoTeal()} id="56" className="chooseTealTwo"></div>
+          
+          <div onClick={() =>restartGame()} id="44" className="restart-button">Restart?</div>
 
-          <button onClick={() =>cOne()} className="trig column__one__button">
-          </button>
-          <button onClick={() =>cTwo()} className="trig column__two__button">
-          </button>
-          <button onClick={() =>cThree()} className="trig column__three__button">
-          </button>
-          <button onClick={() =>cFour()} className="trig column__four__button">
-          </button>
-          <button onClick={() =>cFive()} className="trig column__five__button">
-          </button>
-          <button onClick={() =>cSix()} className="trig column__six__button">
-          </button>
-          <button onClick={() =>cSeven()} className="trig column__seven__button">
-          </button>
+          <div onClick={() =>cOne()} className="trig column__one__button">
+          </div>
+          <div onClick={() =>cTwo()} className="trig column__two__button">
+          </div>
+          <div onClick={() =>cThree()} className="trig column__three__button">
+          </div>
+          <div onClick={() =>cFour()} className="trig column__four__button">
+          </div>
+          <div onClick={() =>cFive()} className="trig column__five__button">
+          </div>
+          <div onClick={() =>cSix()} className="trig column__six__button">
+          </div>
+          <div onClick={() =>cSeven()} className="trig column__seven__button">
+          </div>
 
         </div>
         <div className="bottom">
