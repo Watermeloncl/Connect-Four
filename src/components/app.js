@@ -74,6 +74,67 @@ export default class App extends Component {
       document.getElementById(idThree).style.backgroundColor = "Orange";
       document.getElementById(idFour).style.backgroundColor = "Orange";
       turn = 0;
+      document.getElementById("44").style.zIndex = "3";
+    }
+
+    function restartGame() {
+      document.getElementById("44").style.zIndex = "-3";
+      turn = 1;
+      document.getElementById("43").innerHTML = "Player 1's Turn";
+      car.rOnecOne = 0;
+      car.rTwocOne = 0;
+      car.rThreecOne = 0;
+      car.rFourcOne = 0;
+      car.rFivecOne = 0;
+      car.rSixcOne = 0;
+
+      car.rOnecTwo = 0;
+      car.rTwocTwo = 0;
+      car.rThreecTwo = 0;
+      car.rFourcTwo = 0;
+      car.rFivecTwo = 0;
+      car.rSixcTwo = 0;
+
+      car.rOnecThree = 0;
+      car.rTwocThree = 0;
+      car.rThreecThree = 0;
+      car.rFourcThree = 0;
+      car.rFivecThree = 0;
+      car.rSixcThree = 0;
+
+      car.rOnecFour = 0;
+      car.rTwocFour = 0;
+      car.rThreecFour = 0;
+      car.rFourcFour = 0;
+      car.rFivecFour = 0;
+      car.rSixcFour = 0;
+
+      car.rOnecFive = 0;
+      car.rTwocFive = 0;
+      car.rThreecFive = 0;
+      car.rFourcFive = 0;
+      car.rFivecFive = 0;
+      car.rSixcFive = 0;
+
+      car.rOnecSix = 0;
+      car.rTwocSix = 0;
+      car.rThreecSix = 0;
+      car.rFourcSix = 0;
+      car.rFivecSix = 0;
+      car.rSixcSix = 0;
+
+      car.rOnecSeven = 0;
+      car.rTwocSeven = 0;
+      car.rThreecSeven = 0;
+      car.rFourcSeven = 0;
+      car.rFivecSeven = 0;
+      car.rSixcSeven = 0;
+      var i = 1;
+      while (i <= 42) {
+        document.getElementById(i).style.backgroundColor = "#8f8f8f";
+        i = i + 1
+      }
+      i = 0
     }
 
     function checkForFour() {
@@ -664,6 +725,7 @@ export default class App extends Component {
           <div id="40" className="block row__four column__seven"></div>
           <div id="41" className="block row__five column__seven"></div>
           <div id="42" className="block row__six column__seven"></div>
+          <button onClick={() =>restartGame()} id="44" className="restart-button">Restart?</button>
 
           <button onClick={() =>cOne()} className="trig column__one__button">
           </button>
